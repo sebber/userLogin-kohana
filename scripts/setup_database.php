@@ -70,7 +70,7 @@ if (!$sql){
 	die ('Error opening file');
 }
 
-mysql_multi_query($mysqli, $sql);
+mysqli_multi_query($mysqli, $sql);
 
 
 $mysqli->close();

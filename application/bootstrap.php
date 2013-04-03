@@ -109,7 +109,7 @@ Kohana::$log->attach(new Log_File(APPPATH.'logs'));
  */
 if (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX')
 {
-    Kohana::$config->attach(new Config_File('config/pagodabox'));
+    Kohana::$config->attach(new Config_File('config/pagoda'));
 }
 else
 {

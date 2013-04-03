@@ -1,9 +1,9 @@
 <?php
 
-$hostname = $_SERVER['DB1_HOST'],
-$database = $_SERVER['DB1_NAME'],
-$username = $_SERVER['DB1_USER'],
-$password = $_SERVER['DB1_PASS'],
+$hostname = $_SERVER['DB1_HOST'];
+$database = $_SERVER['DB1_NAME'];
+$username = $_SERVER['DB1_USER'];
+$password = $_SERVER['DB1_PASS'];
 
 $mysqli = new mysqli($hostname, $username, $password, $database);
  

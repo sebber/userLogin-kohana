@@ -63,6 +63,12 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
  */
 I18n::lang('en-us');
 
+
+/**
+ * Set a salt for Cookies
+ */
+Cookie::$salt = 'as9du8oji3r9t0823jirf55a.=%A!';
+
 /**
  * Set Kohana::$environment if a 'KOHANA_ENV' environment variable has been supplied.
  *
@@ -90,7 +96,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/',
+	'base_url'   => '',
 	'index_file' => false
 ));
 
@@ -116,8 +122,8 @@ Kohana::modules(array(
 	// 'minion'     => MODPATH.'minion',     // CLI Tasks
 	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	));
+	// 'userguide'  => MODPATH.'userguide',  	// User guide and API documentation
+));
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
@@ -125,6 +131,6 @@ Kohana::modules(array(
  */
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'welcome',
+		'controller' => 'home',
 		'action'     => 'index',
 	));

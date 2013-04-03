@@ -1,3 +1,10 @@
 RewriteEngine On
-RewriteRule ^(application|modules|system)/ - [F,L]
-RewriteRule .* index.php [PT]
+
+RewriteBase /
+
+RewriteRule ^(application|modules|system) - [F,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule .* index.php/$0 [PT,L]

@@ -4,6 +4,10 @@ class Controller_Application extends Controller {
 
 	protected $content = '';
 
+	public function before()
+	{
+		parent::before();
+	}
 
 	public function after()
 	{
@@ -11,6 +15,8 @@ class Controller_Application extends Controller {
 		$template->content($this->content);
 
 		$this->response->body($template->render());
+
+		parent::after();
 	}
 
 }

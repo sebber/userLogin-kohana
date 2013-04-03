@@ -7,4 +7,10 @@ class Controller_Account extends Controller_Application {
 		$this->content = 'hello account!';
 	}
 
+
+	public function action_login()
+	{
+		$this->content = View::factory('account/login');
+	}
+
 }

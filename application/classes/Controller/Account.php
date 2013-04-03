@@ -13,4 +13,11 @@ class Controller_Account extends Controller_Application {
 		$this->content = View::factory('account/login');
 	}
 
+	public function action_roles()
+	{
+		$roles = DB::select()->from('roles')->execute();
+
+		$this->content = View::factory('account/roles')->bind('roles', $roles);
+	}
+
 }

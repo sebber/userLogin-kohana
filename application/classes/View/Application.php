@@ -11,10 +11,17 @@ class View_Application {
 
 		return $this->_content;
 	}
-
+	
+	public function render()
+	{
+		return $this->__toString();
+	}
+	
 	public function __toString()
 	{
 		return View::factory('application')->bind('view', $this)->render();
 	}
+
+
 
 }

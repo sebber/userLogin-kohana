@@ -10,7 +10,7 @@ class Controller_Application extends Controller {
 		$template = new View_Application();
 		$template->content($this->content);
 
-		$this->response->body($template->__toString());
+		$this->response->body($template->render());
 	}
 
 }

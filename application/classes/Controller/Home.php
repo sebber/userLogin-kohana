@@ -4,7 +4,7 @@ class Controller_Home extends Controller_Application {
 
 	public function action_index()
 	{
-		$this->content = 'hello worlds!';
+		$this->content = View::factory('home/index');
 	}
 
 }

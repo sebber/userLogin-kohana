@@ -4,9 +4,12 @@ web1:
     - /application/logs
   php_extensions:
     - mcrypt
+    - mysqli
     - mysql
     - apc
   php_short_open_tag: "1"
+  before_deploy:
+    - "php scripts/setup_database.php"
 
 db1:
   name: rana

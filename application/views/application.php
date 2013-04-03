@@ -13,12 +13,25 @@
 		
 		<div class="navbar navbar-static-top">
           <div class="navbar-inner">
+            <div class="container">
 
-            <div class="container" style="width: auto; padding: 0 20px;">
-              <a class="brand" href="#"><?= $view->title() ?></a>
-              <ul class="nav">
-                <li class="active"><a href="<?= URL::base() ?>">Home</a></li>
-              </ul>
+			    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			    	<span class="icon-bar"></span>
+			      	<span class="icon-bar"></span>
+			      	<span class="icon-bar"></span>
+			    </a>
+
+              	<a class="brand" href="<?= URL::base() ?>"><?= $view->title() ?></a>
+
+      			<div class="nav-collapse collapse">
+       				<ul class="nav">
+                		<li class="active"><a href="<?= URL::base() ?>">Home</a></li>
+              		</ul>
+
+              		<ul class="nav pull-right">
+                      <li><a href="<?= URL::site('login') ?>">Login</a></li>
+                    </ul>
+      			</div>
             </div>
 
           </div>
@@ -28,19 +41,8 @@
 
 			<div class="row">
 				<div class="span12">
-					<div class="hero-unit">
-				        <h1>Hello, world!</h1>
-				        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-				        <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-				      </div>
-				</div>
-			</div>
-
-
-			<div class="row">
-				<div class="span12">
 					
-					<?= $view->content(); ?>
+					<?= $view->content() ?>
 
 				</div>
 			</div>

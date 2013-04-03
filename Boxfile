@@ -1,0 +1,12 @@
+web1:
+  shared_writable_dirs:
+    - /application/cache
+    - /application/logs
+  php_extensions:
+    - mcrypt
+    - mysql
+    - apc
+  php_short_open_tag: "1"
+
+db1:
+  name: rana
